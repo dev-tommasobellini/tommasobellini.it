@@ -1,0 +1,151 @@
+@keyframes example {
+    from {margin-left: -300px; color:grey; opacity: 0;}
+    to {margin-left: 0px; color:white; opacity: 1;}
+  }
+  @keyframes example2 {
+     from {margin-left: 400px;  color:grey; opacity: 0;}
+     to {margin-left: 0px;color:white; opacity: 1;}
+  }
+  @keyframes heartbeat {
+    0% {
+      transform: translateX(50px);
+    }
+    50% {
+      transform: translateX(50px);
+    }
+   
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  @keyframes openpostcard {
+    100% {
+     transform: rotateX(180deg) translateY(0);  
+    }
+  }
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+   
+    100% {
+      opacity: 0.8;
+    }
+  }
+  @keyframes shotRightToLeft{
+      0% {
+        opacity: 0;
+        transform: translateX(30vw);
+      }
+      20% {
+        transform: translateX(0vw);
+        opacity: 1;
+      }
+      80% {
+        transform: translateX(-30vw);
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translateX(-40vw);
+      }
+  }
+  @keyframes shotLeftToRight {
+    0% {
+      opacity: 0;
+      transform: translateX(10vw);
+    }
+    20% {
+      opacity: 1;
+      transform: translateX(20vw);
+    }
+    80% {
+      opacity: 1;
+      transform: translateX(70vw);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(80vw);
+    }
+  }
+  @keyframes shotLeftToBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(-10vw);
+    }
+    20% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    80% {
+      opacity: 1;
+      transform: translateY(30vw);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(40vw);
+    }
+  }
+  @keyframes shotittoright {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(5vw);
+    }
+  }
+  @keyframes shotittoleft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-5vw);
+    }
+  }
+  @keyframes rotate {
+    100%{
+      transform: rotateZ(360deg);
+    }
+    
+  }
+  @keyframes rotate90 {
+    100%{
+      transform: rotateZ(-90deg);
+    }   
+  }
+  @keyframes letterpopup {
+    0%{
+      transform: translateY(0);
+    }
+    20% {
+      border-left: 25vw solid transparent;
+      border-right: 25vw solid transparent;
+      border-top: 30vh solid white;
+      border-bottom: 30vh solid transparent;
+    }
+    40% {
+      border-left: 27vw solid transparent;
+      border-right: 27vw solid transparent;
+      border-top: 33vh solid white;
+      border-bottom: 33vh solid transparent;
+    } 
+    60% {
+      border-left: 29vw solid transparent;
+      border-right: 29vw solid transparent;
+      border-top: 35vh solid white;
+      border-bottom: 35vh solid transparent;
+    }
+    80% {
+      border-left: 32vw solid transparent;
+      border-right: 32vw solid transparent;
+      border-top: 39vh solid white;
+      border-bottom: 39vh solid transparent;
+    }
+    100%{
+      transform: translateY(-25vh);
+      border-left: 34vw solid transparent;
+      border-right: 34vw solid transparent 34vw solid transparent;
+      border-top: 44vh solid white;
+      border-bottom: 44vh solid transparent;
+    }   
+  }

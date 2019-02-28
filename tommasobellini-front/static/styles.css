@@ -1,0 +1,216 @@
+
+@import url('animations.css');
+@import url('responsive.css');
+
+@media only screen and (min-width: 768px) {
+  * {
+      margin:0;
+    }
+    .container {
+      background-color: rgba(0,0,0,0.9);
+    }
+    
+    .arrow-down {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-left: 50vw solid transparent;
+      border-right: 50vw solid transparent;
+      border-top: 60vh solid white;
+    }
+    /* .arrow-down::before {
+      content: '';
+      display: flex;
+      z-index: 1;
+      top:30vh;
+      border-radius: 20px; 
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      border-left: 25vw solid transparent;
+      border-right: 25vw solid transparent;
+      border-top: 30vh solid white;
+      animation: letterpopup 3s 4s linear;
+    } */
+    .arrow-down::after {
+      content: '';
+      display: flex;
+      align-items: center;
+      top:0;
+      z-index: 0;
+      justify-content: center;
+      position: absolute;
+      border-left: 48vw solid transparent;
+      border-right: 48vw solid transparent;
+      border-top: 58vh solid rgba(0,0,0,0.7);;
+    }
+    
+    .arrow-down2 {
+      position: absolute;
+      top:0;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-left: 50vw solid transparent;
+      border-right: 50vw solid transparent;
+      border-top: 60vh solid rgba(0,0,0, 0.95);
+      animation: openpostcard 3s 3s forwards;
+      transform-origin: top;
+    
+    }
+    
+    
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 60vh;
+      background-color: grey;
+      border-style: solid;
+      border-color:black transparent transparent;
+      transform: scale(1.0001);
+    }
+    .header-sub {
+      height: 40vh;
+    }
+    .div2 {
+      height: 100vh;
+      background-color: black;
+    }
+    .div3 {
+      height: 100vh;
+      background-color: black;
+    }
+    .text-in-arrow {
+      position: absolute;
+      z-index: 1;
+      top: 15%;
+      left: 30%;
+      width: 50%;
+      height: 50%;
+    }
+    .title {
+      display: flex;
+      flex-direction: row;
+    }
+    .title > #name {
+      position: absolute;
+      opacity: 0;
+      font-size: 55px;
+      color: white;
+      -webkit-animation-name: example; /* Safari 4.0 - 8.0*/
+      -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0*/
+      animation-name: example;
+      animation-duration: 4s;
+      animation-delay: 4s;
+      animation-fill-mode: forwards;  
+    
+    }
+    .title > #lastname {
+      position: relative;
+      opacity: 0;
+      margin: 50px;
+      font-size: 55px;
+      color: white;
+      -webkit-animation-name: example2; 
+      -webkit-animation-duration: 4s;
+      animation-name: example2;
+      animation-duration: 4s;
+      animation-delay: 4s;
+      animation-fill-mode: forwards;  
+    
+    }
+    .job  {
+      position: relative;
+      top: -85px;
+      opacity: 0;
+      left: 180px;
+      color: white;
+      font-size: 25px;
+      animation: example2 3s 4s linear, heartbeat 4s 3s 1;
+      animation-fill-mode: forwards;  
+    
+    }
+    .battle {
+      display: flex;
+      width: 100%;
+    }
+    .battle .front, .back {
+      opacity: 0;
+      width: 50%;
+      color:white;
+      font-size: 40px;
+      margin: 30px;
+      float: left;
+    }
+    .battle .front {
+      margin-left: 45px;
+      text-align: start;
+      animation: fade 2s 6s linear, shotittoright 3s 6s 4;
+      animation-fill-mode: forwards;  
+    }
+    .battle .back {
+      text-align: right;
+      margin-right: 45px;
+      animation: fade 2s 6s linear, shotittoleft 3s 8s 4;
+      animation-fill-mode: forwards;  
+    }
+    .node-logo-box,.flask-logo-box, .django-logo-box{
+      opacity: 0;
+        animation: shotRightToLeft;
+        animation-duration: 2s;
+        width:250px;
+        margin:20px auto 0 auto;
+        align-items: center;
+        justify-content: center;
+        animation-delay: 9s;
+        
+        animation-timing-function: linear;
+    }
+    .node-logo-box img, .flask-logo-box img, .django-logo-box img{
+        opacity: 1;
+        animation-duration: 3s;
+        transform: rotateZ(-90deg);
+        animation-timing-function: linear;
+    }
+    .bootstrap-logo-box, .vue-logo-box, .react-logo-box {
+        opacity: 0; 
+        width:250px;
+        margin:20px auto 0 auto;
+        align-items: center;
+        justify-content: center;
+        animation: shotLeftToRight;
+        animation-duration: 2s;
+        animation-delay: 7s;
+        
+        animation-timing-function: linear;
+    }
+    .vue-logo-box{
+      animation-delay: 11s;
+    }
+    .node-logo-box{     
+      animation-delay: 13s;
+    }
+    .bootstrap-logo-box {
+      animation-delay: 15s;
+    }
+    .flask-logo-box{
+      animation-delay: 17s;
+    }
+    .react-logo-box img {
+        opacity: 1;
+        animation: rotate;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+    }
+    .flask-logo-box img {
+      opacity: 1;
+      filter: invert(100%);
+      transform: rotateZ(90deg);
+  }
+    .node-logo-box img{
+      opacity: 1;
+      transform: rotateZ(360deg);
+    }
+  }
