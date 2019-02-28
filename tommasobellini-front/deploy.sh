@@ -7,4 +7,4 @@ set -e
 npm.cmd run build
 
 # deploy to firebase
-firebase deploy --token "1/gqwF8Vz90pNqRB4aZYR0K8BE7ZJs7LBhfaLT0K3ikDo"
+firebase deploy --token "1/pYmILKW17cdX55qzc_m42FR1HNo9Y8CZxkdHQCm6y8lPBK5NHATOe5ZqTTNZQAZt"
