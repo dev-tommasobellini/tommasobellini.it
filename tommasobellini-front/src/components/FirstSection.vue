@@ -4,7 +4,7 @@
     <header class="arrow-down">
       <div class="text-in-arrow">
         <h1 class="title">
-          <span id="name">Tommaso  Martino25</span>
+          <span id="name">Tommaso</span>
           <span id="lastname">Bellini</span>
         </h1>
          <h3 class="job">Software Developer</h3>
