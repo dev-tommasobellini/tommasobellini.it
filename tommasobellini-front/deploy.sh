@@ -4,7 +4,7 @@
 set -e
 
 # build
-npm run build
+npm.cmd run build
 
 # deploy to firebase
 firebase deploy
