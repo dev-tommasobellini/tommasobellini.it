@@ -9,7 +9,7 @@ pipeline {
             steps {
                 echo 'Building...'
                 dir("tommasobellini-front") {
-                    sh 'npm install'
+                    bat 'npm install'
                 }
                 echo 'Built...'
             }
