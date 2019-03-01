@@ -8,7 +8,7 @@ pipeline {
             steps {
                 echo 'Building...'
                 dir("tommasobellini-front") {
-                    sh 'npm.cmd run build'
+                    sh 'npm install'
                 }
                 echo 'Built...'
             }
