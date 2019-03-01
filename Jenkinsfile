@@ -8,6 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
+                sh "echo hello"
                 dir("tommasobellini-front") {
                     sh 'npm install'
                 }
