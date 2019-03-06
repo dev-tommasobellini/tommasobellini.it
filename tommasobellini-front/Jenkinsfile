@@ -19,6 +19,7 @@ pipeline {
             steps {
                 echo 'Deploying...'
                 dir("tommasobellini-front") {
+                    sh 'npm install -g firebase-tools'
                     sh 'firebase deploy --token "1/pYmILKW17cdX55qzc_m42FR1HNo9Y8CZxkdHQCm6y8lPBK5NHATOe5ZqTTNZQAZt"'                   
                 }
                 echo 'Deployed'
