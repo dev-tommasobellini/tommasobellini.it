@@ -13,6 +13,7 @@ pipeline {
                     sh 'npm install'
                     sh 'npm run build'
                     sh 'git config git-ftp.syncroot dist/'
+                    sh 'npm install git-ftp'
                     sh 'git ftp init --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://ftp.tommasobellini.it/htdocs'
                     sh 'git ftp push'
                 }
