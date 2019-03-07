@@ -10,6 +10,7 @@ pipeline {
                 echo 'Building...'
                 sh "echo hello"
                 dir("tommasobellini-front") {
+                    sh 'npm install'
                     sh 'npm run build'
                 }
                 echo 'Built...'
