@@ -1,12 +1,24 @@
 <template>
   <div id="app">
-    <router-view/>
+    <IntroSection />
+    <!-- <FirstSection /> -->
+    <SecondSection />
+    <!-- <router-view/> -->
   </div>
 </template>
 
 <script>
+import FirstSection from './components/FirstSection';
+import SecondSection from './components/SecondSection';
+import IntroSection from './components/IntroSection';
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    FirstSection,
+    SecondSection,
+    IntroSection
+  }
 }
 </script>
 
