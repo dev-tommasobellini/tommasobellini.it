@@ -1,30 +1,35 @@
 <template>
   <div id="app">
+    <Navbar />
     <IntroSection />
     <!-- <FirstSection /> -->
     <SecondSection />
     <!-- <router-view/> -->
+    <FooterBar />
   </div>
 </template>
 
 <script>
+import Navbar from './layout/Navbar'
 import FirstSection from './components/FirstSection';
 import SecondSection from './components/SecondSection';
 import IntroSection from './components/IntroSection';
+import FooterBar from './layout/FooterBar';
 
 export default {
   name: 'App',
   components: {
+    Navbar,
     FirstSection,
     SecondSection,
-    IntroSection
+    IntroSection,
+    FooterBar
   }
 }
 </script>
 
 <style>
 html, body {
-  height: 100vh;
   width: 100vw;
 }
 #app {
@@ -35,5 +40,15 @@ html, body {
 }
 body{
   font-family: 'Roboto', sans-serif;
+}
+@media (max-width: 767px) {
+  #app {
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+  }
 }
 </style>

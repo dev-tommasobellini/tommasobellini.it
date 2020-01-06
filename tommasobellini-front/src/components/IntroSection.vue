@@ -1,8 +1,12 @@
 <template>
   <div :class="clickedArrows === true ? 'introContainer slideDown': 'introContainer'">
-    <h1 class="line-1 anim-typewriter">Hi, my name is Tommaso, welcome in my portfolio.</h1>
+    <div class="spaceship">
+    </div>
+    <h1 class="line-1 anim-typewriter">Hi! Welcome in my portfolio.</h1>
     <h2 class="line-2 anim-typewriterDelay">Enjoy it!</h2>
-
+    <div class="frameworkLogos">
+      <!-- <img src="../assets/django-logo.png" width="1000"/> -->
+    </div>
     <div class="introEnd anim-blinkArrows appearDelay">
       <div class="center-con">
         <div class="round" @click="clickArrows">
@@ -17,6 +21,7 @@
 </template>
 <script>
 import ChevronDownIcon from "vue-material-design-icons/ChevronDown.vue";
+import '../../static/animations.css'
 
 export default {
   name: "IntroSection",
@@ -56,6 +61,7 @@ export default {
 </script>
 
 <style scoped>
+
 .introContainer {
   height: 100vh;
   color: white;
@@ -77,6 +83,12 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.frameworkLogos {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  animation: shotBottomToTop 4s infinite;
 }
 .chevron-down-icon {
   font-size: 30px;
@@ -104,13 +116,13 @@ export default {
 /* Animation */
 .anim-typewriter,
 .anim-typewriterDelay {
-  animation: typewriter 4s steps(70) 1s 1 normal both,
+  animation: typewriter 2s steps(70) 1s 1 normal both,
     blinkTextCursor 500ms steps(50) infinite normal;
 }
 .anim-typewriterDelay {
   animation: typewriter2 2s steps(20) 1s 1 normal both,
     blinkTextCursor 500ms steps(20) infinite normal;
-  animation-delay: 5s;
+  animation-delay: 2s;
 }
 .anim-blinkArrows {
   animation: blinkTextCursor 500ms infinite normal;
@@ -120,7 +132,7 @@ export default {
     width: 0;
   }
   to {
-    width: 30em;
+    width: 17em;
   }
 }
 @keyframes typewriter2 {
@@ -217,7 +229,7 @@ export default {
 .appearDelay {
   animation-name: appear;
   animation-duration: 2s;
-  animation-delay: 7s;
+  animation-delay: 4s;
   animation-fill-mode: forwards;
 }
 @keyframes appear {
@@ -255,5 +267,26 @@ export default {
   animation-delay: 0.2s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+}
+
+/* RESPONSIVE CSS */
+@media (max-width: 767px) {
+  .introContainer {
+    height: 100vh;
+    color: white;
+    background-image: url('../assets/ep_naturalblack.png');
+    animation: slide 40s linear infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .line-1, .line-2 {
+    width: 10em;
+    font-size: 1.2em;
+  }
+  .line-2 {
+    width: 3em;
+  }
 }
 </style>
