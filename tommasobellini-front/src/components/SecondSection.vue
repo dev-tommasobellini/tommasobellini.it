@@ -7,7 +7,7 @@
             <img class="profileImg" src="../assets/MyProfilePhoto.jpeg"/>
         </div>
         <div class="stories">
-            <div class="">
+            <div class="borderLeft">
                 <h4>My personal Story</h4>
                 <p>
                     Hi, I'm Tommaso and i'm 22 years old.
@@ -15,7 +15,7 @@
                     I was born in Warsaw (Poland) and i was adopted when i was 5 years old by two italians.
                 </p>
             </div>
-            <div class="textAlignRight">
+            <div class="textAlignRight borderTop borderRight">
                 <h4>My school studies and work Story</h4>
                 <p>
                     Hi, I'm Tommaso and i'm 22 years old.
@@ -23,7 +23,7 @@
                     I was born in Warsaw (Poland) and i was adopted when i was 5 years old by two italians.
                 </p>
             </div>
-             <div class="">
+             <div class="borderTop borderLeft">
                 <h4>My future goals Story</h4>
                 <p>
                     Hi, I'm Tommaso and i'm 22 years old.
@@ -46,7 +46,7 @@ export default {
 <style scoped>
     .secondSectionContainer {
         min-height: 70vh;
-        margin: 30px 300px;
+        margin: 30px 500px;
     }
     .profile {
         height: 300px;
@@ -70,15 +70,19 @@ export default {
     }
     .borderLeft {
         border-left: dashed 1px grey;
+        border-radius: 20px;
     }
     .borderRight {
         border-right: dashed 1px grey;
+        border-radius: 20px;
     }
     .borderTop {
         border-top: dashed 1px grey;
+        border-radius: 20px;
     }
     .borderBottom {
         border-bottom: dashed 1px grey;
+        border-radius: 20px;
     }
     /* RESPONSIVE */
     @media (max-width: 767px) {

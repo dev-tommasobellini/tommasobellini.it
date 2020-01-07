@@ -1,6 +1,9 @@
 # tommasobellini.it
 
-> Software Developer Tommaso Bellini Site
+> Fullstack Developer - Tommaso Bellini Site
+
+# instructions
+- Build and deploy: npm build & firebase deploy (or run script "deploy.sh")
 
 ## Build Setup
 
@@ -19,3 +22,8 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+
+## TODO
+- Connect to Google Analytics
