@@ -1,18 +1,27 @@
 <template>
     <div class="footer">
+      <div class="rounded">
+
+      </div>
         <div class="socialApps">
+          <div>
             <a :href="socials.facebook">
-                <Facebook />
+              <Facebook />
             </a>
+          </div>
+          <div>
             <a :href="socials.linkedin">
-                <Linkedin />
+              <Linkedin />
             </a>
+          </div>
+          <div>
             <a :href="socials.instagram">
-                <Instagram />
+              <Instagram />
             </a>
+          </div>
         </div>
         <div class="createdBy">
-            <p>Powered by Znieczu</p>
+            <p>Powered by <b>Znieczu</b> ©2020</p>
         </div>
     </div>
 </template>
@@ -53,16 +62,31 @@ export default {
         background-image: url('../assets/ep_naturalblack.png');
         animation: slide 40s linear infinite;
     }
+    .rounded {
+      position: absolute;
+      z-index: 0;
+      bottom: -30px;
+      left: -100px;
+      width: 15%;
+      height: 250px;
+      background-color: black;
+      border-radius: 50%;
+      background-image: url('../assets/ep_naturalblack.png');
+      animation: slide 40s linear infinite;
+    }
     .socialApps {
         height: 100%;
         display: flex;
+        margin-right: 25px;
         align-items: center;
         justify-content: space-around;
-        font-size: 20px;
+        font-size: 30px;
         color: white;
     }
+    .socialApps div {
+    }
     .material-design-icon {
-        
+
     }
     .createdBy {
         position: relative;

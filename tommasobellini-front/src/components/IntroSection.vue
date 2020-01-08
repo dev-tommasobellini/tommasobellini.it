@@ -1,6 +1,6 @@
 <template>
   <div :class="clickedArrows === true ? 'introContainer slideDown': 'introContainer'">
-    <div class="spaceship">
+    <div class="rounded">
     </div>
     <h1 class="line-1 anim-typewriter">Hi! Welcome in my portfolio.</h1>
     <h2 class="line-2 anim-typewriterDelay">Enjoy it!</h2>
@@ -48,7 +48,7 @@ export default {
         //     span_node.style.animationName = 'fallDown'
         //     span_node.style.animationPlayState = 'running'
         //     console.log(span_node.style.animationPlayState)
-        //     var textnode = document.createTextNode(letter); 
+        //     var textnode = document.createTextNode(letter);
         //     span_node.appendChild(textnode);                              // Append the text to <li>
         //     el2.appendChild(span_node)
         // })
@@ -71,6 +71,18 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.rounded {
+  position: absolute;
+  z-index: 0;
+  top: 90vh;
+  right: 0;
+  width: 15%;
+  height: 250px;
+  background-color: black;
+  border-radius: 0 0 50% 50%;
+  background-image: url('../assets/ep_naturalblack.png');
+  animation: slide 40s linear infinite;
 }
 .introEnd {
   opacity: 0;
@@ -104,7 +116,7 @@ export default {
   margin: 0 auto;
   border-right: 2px solid rgba(255, 255, 255, 0.75);
   font-size: 180%;
-  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; 
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
