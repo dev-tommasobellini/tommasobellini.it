@@ -46,7 +46,7 @@ export default {
 <style scoped>
     .secondSectionContainer {
         min-height: 70vh;
-        margin: 30px 500px;
+        margin: 90px 500px;
     }
     .profile {
         height: 300px;

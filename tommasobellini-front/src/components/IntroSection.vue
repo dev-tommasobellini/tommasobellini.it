@@ -1,7 +1,9 @@
 <template>
   <div :class="clickedArrows === true ? 'introContainer slideDown': 'introContainer'">
     <div class="rounded">
+
     </div>
+
     <h1 class="line-1 anim-typewriter">Hi! Welcome in my portfolio.</h1>
     <h2 class="line-2 anim-typewriterDelay">Enjoy it!</h2>
     <div class="frameworkLogos">
@@ -63,7 +65,7 @@ export default {
 <style scoped>
 
 .introContainer {
-  height: 100vh;
+  height: 110vh;
   color: white;
   background-image: url('../assets/ep_naturalblack.png');
   animation: slide 40s linear infinite;
@@ -74,14 +76,13 @@ export default {
 }
 .rounded {
   position: absolute;
+  display: flex;
   z-index: 0;
-  top: 90vh;
-  right: 0;
-  width: 15%;
-  height: 250px;
-  background-color: black;
-  border-radius: 0 0 50% 50%;
-  background-image: url('../assets/ep_naturalblack.png');
+  top: 100vh;
+  width: 110%;
+  height: 200px;
+  border-radius: 50%;
+  background-color: white;
   animation: slide 40s linear infinite;
 }
 .introEnd {

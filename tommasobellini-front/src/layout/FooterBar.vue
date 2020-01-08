@@ -66,11 +66,11 @@ export default {
       position: absolute;
       z-index: 0;
       bottom: -30px;
-      left: -100px;
-      width: 15%;
+      left: 0;
+      width: 100%;
       height: 250px;
       background-color: black;
-      border-radius: 50%;
+      border-radius: 50% 50% 0 0;
       background-image: url('../assets/ep_naturalblack.png');
       animation: slide 40s linear infinite;
     }
