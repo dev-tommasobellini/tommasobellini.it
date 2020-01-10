@@ -1,8 +1,27 @@
 <template>
   <div class="navbar">
       <div class="mobileMenu">
-        <a>
-            <Apps/>
+        <div :class="menuClicked ? 'showMenuOpen' : ''">
+          <div v-if="showExit" :class="menuClicked ? 'menuListMobile' : 'display: none'">
+            <ul>
+              <li class="" v-for="item in menu" :key="item.id">
+                <a :href="item.url">
+                  <div class="title">
+                    <span class="text write" data-splitting="lines">{{ item.name }}</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+         
+        </div>
+        <a @click="onClickMenu">
+          <span v-if="showApps">
+           <Apps />
+          </span>
+          <span v-if="showExit">
+            <Close/>
+          </span>
         </a>
       </div>
       
@@ -24,12 +43,16 @@
 </template>
 <script>
 import "../../static/animations.css";
+import Close from 'vue-material-design-icons/Close.vue';
 import Apps from 'vue-material-design-icons/Apps.vue';
 
 export default {
   name: "Navbar",
   data() {
     return {
+      menuClicked: false,
+      showApps: true,
+      showExit: false,
       menu: [
         {
           name: "Home",
@@ -50,13 +73,24 @@ export default {
       ]
     };
   },
+  methods: {
+    onClickMenu() {
+      console.log('ciao')
+      console.log(this.menuClicked)
+      this.showApps = !this.showApps
+      this.showExit = !this.showExit
+      this.menuClicked = !this.menuClicked
+    }
+  },
   components: {
-      Apps
+      Apps,
+      Close
   }
 };
 </script>
 <style scoped>
 .navbar {
+  display: none;
   position: absolute;
   font-family: "Courier New", Courier, "Lucida Sans Typewriter",
     "Lucida Typewriter", monospace;
@@ -65,10 +99,7 @@ export default {
   height: 5vw;
   width: 100%;
 }
-ul {
-  display: flex;
-  justify-content: space-around;
-}
+
 li {
   list-style: none;
 }
@@ -84,6 +115,9 @@ a {
   list-style: none;
   display: flex;
   flex-direction: column;
+}
+.menuListMobile {
+  display: none;
 }
 
 .title {
@@ -168,6 +202,7 @@ a {
 }
 @media (max-width: 767px) {
     .navbar {
+        display: inline;
         position: absolute;
         font-family: "Courier New", Courier, "Lucida Sans Typewriter",
             "Lucida Typewriter", monospace;
@@ -178,16 +213,39 @@ a {
     }
     a {
         font-size: 30px;
+        z-index: 1;
+
     }
     .mobileMenu {
         position: relative;
-        margin: 25px;
+        margin: 50px;
         display: flex;
         justify-content: flex-end;
         align-items: center;
-    }      
+    } 
+    .material-design-icon:hover {
+      cursor: pointer;
+    }
+    .showMenuOpen {
+      display: block;
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 55vh;
+      height: 300px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 0 0 0 90%;
+      z-index: 0;
+    }
     .centralMenu {
         display: none;
+    }
+    .menuListMobile {
+      display: block;
+      margin-top: 50px;
+    }
+    .menuListMobile ul li {
+      line-height: 3em;
     }
 }
 </style>
