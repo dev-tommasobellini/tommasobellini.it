@@ -66,7 +66,6 @@ export default {
       position: absolute;
       z-index: 0;
       bottom: -30px;
-      left: 0;
       width: 100%;
       height: 250px;
       background-color: black;
@@ -105,6 +104,11 @@ export default {
             bottom:0;
             left:0;
             height: 8vw;
+        }
+        .rounded {
+          height: 120px;
+          width: 100%;
+          left: 0;
         }
          .createdBy {
             position: relative;

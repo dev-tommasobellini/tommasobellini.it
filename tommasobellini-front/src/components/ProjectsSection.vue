@@ -25,6 +25,12 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 50%;
+        border-radius: 0 50% 0;
+    }
+    @media (max-width: 767px) {
+      .projects {
+        height: 100vh;
+        border-radius: 0 20% 0;
+      }
     }
 </style>

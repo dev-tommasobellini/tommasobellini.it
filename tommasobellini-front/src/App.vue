@@ -5,6 +5,7 @@
     <!-- <FirstSection /> -->
     <SecondSection />
     <ProjectsSection />
+    <ContactSection />
     <!-- <router-view/> -->
     <FooterBar />
   </div>
@@ -15,6 +16,7 @@ import Navbar from './layout/Navbar'
 import FirstSection from './components/FirstSection';
 import SecondSection from './components/SecondSection';
 import ProjectsSection from './components/ProjectsSection';
+import ContactSection from './components/ContactSection';
 import IntroSection from './components/IntroSection';
 import FooterBar from './layout/FooterBar';
 
@@ -25,6 +27,7 @@ export default {
     FirstSection,
     SecondSection,
     ProjectsSection,
+    ContactSection,
     IntroSection,
     FooterBar
   }

@@ -294,6 +294,9 @@ export default {
     justify-content: center;
     align-items: center;
   }
+  .rounded {
+    display: none;
+  }
   .line-1, .line-2 {
     width: 10em;
     font-size: 1.2em;
