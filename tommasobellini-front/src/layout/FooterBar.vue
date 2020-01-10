@@ -67,7 +67,7 @@ export default {
       z-index: 0;
       bottom: -30px;
       width: 100%;
-      height: 250px;
+      height: 150px;
       background-color: black;
       border-radius: 50% 50% 0 0;
       background-image: url('../assets/ep_naturalblack.png');
