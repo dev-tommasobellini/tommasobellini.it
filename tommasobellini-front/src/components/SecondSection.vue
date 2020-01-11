@@ -7,9 +7,7 @@
       <img class="profileImg" src="../assets/MyProfilePhoto.jpeg" />
     </div>
     <div class="chat">
-        <h3>STORIES</h3>
-
-      <div class="mine messages">
+      <div class="yours messages">
         <div class="message last">
             <h4>Personal</h4>
             <p>
@@ -19,6 +17,7 @@
             </p>
         </div>
       </div>
+      <div style="height: 75px; width:0; border: dotted 2px #eee;"></div>
       <div class="yours messages">
         <div class="message last">
             <h4>School studies and work</h4>
@@ -29,7 +28,8 @@
             </p>
         </div>
       </div>
-      <div class="mine messages">
+      <div style="height: 75px; width:0; border: dotted 2px #eee;"></div>
+      <div class="yours messages">
         <div class="message last">
             <h4>Future goals</h4>
              <p>
@@ -138,7 +138,6 @@ h1, h2, h3, h4 {
 }
 
 .messages {
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
 }
@@ -149,40 +148,19 @@ h1, h2, h3, h4 {
   margin-top: 5px;
   margin-bottom: 5px;
   display: inline-block;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);
 }
 
 .yours {
-  align-items: flex-start;
+  align-items: center;
 }
 
 .yours .message {
-  margin-right: 25%;
   background-color: #eee;
   position: relative;
+  text-align: center;
 }
 
-.yours .message.last:before {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  bottom: 0;
-  left: -7px;
-  height: 20px;
-  width: 20px;
-  background: #eee;
-  border-bottom-right-radius: 15px;
-}
-.yours .message.last:after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
-  left: -10px;
-  width: 10px;
-  height: 20px;
-  background: white;
-  border-bottom-right-radius: 10px;
-}
 
 .mine {
   align-items: flex-end;

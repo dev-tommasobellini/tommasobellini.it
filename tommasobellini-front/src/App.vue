@@ -47,6 +47,9 @@ html, body {
 body{
   font-family: 'Roboto', sans-serif;
 }
+a {
+  text-decoration: none;
+}
 @media (max-width: 767px) {
   #app {
     margin: 0;

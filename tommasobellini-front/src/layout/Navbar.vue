@@ -5,7 +5,7 @@
           <div v-if="showExit" :class="menuClicked ? 'menuListMobile' : 'display: none'">
             <ul>
               <li class="" v-for="item in menu" :key="item.id">
-                <a :href="item.url">
+                <a  @click="clickMenuItem(item.section)">
                   <div class="title">
                     <span class="text write" data-splitting="lines">{{ item.name }}</span>
                   </div>
@@ -15,9 +15,9 @@
           </div>
          
         </div>
-        <a @click="onClickMenu">
+        <a @click="onClickMenu" class="icons">
           <span v-if="showApps">
-           <Apps />
+           <Apps class="closeIcon"/>
           </span>
           <span v-if="showExit">
             <Close/>
@@ -30,7 +30,7 @@
 
       <ul>
         <li class="" v-for="item in menu" :key="item.id">
-          <a :href="item.url">
+          <a :href="item.url" >
             <div class="title">
               <span class="text write" data-splitting="lines">{{ item.name }}</span>
               <span aria-hidden="true" class="text laser" data-splitting="lines">{{ item.name }}</span>
@@ -56,19 +56,23 @@ export default {
       menu: [
         {
           name: "Home",
-          url: "/"
+          url: "/",
+          section: 'introContainer'
         },
         {
           name: "Projects",
-          url: "projects"
+          url: "#projects",
+          section: 'projects'
         },
         {
           name: "About",
-          url: "#/about"
+          url: "#about",
+          section: 'secondSectionContainer'
         },
         {
           name: "Contact",
-          url: "contact"
+          url: "#contact",
+          section: 'contact'
         }
       ]
     };
@@ -80,6 +84,13 @@ export default {
       this.showApps = !this.showApps
       this.showExit = !this.showExit
       this.menuClicked = !this.menuClicked
+    },
+    clickMenuItem(className) {
+      const el = document.getElementsByClassName(className)[0];
+        console.log(el)
+        if (el) {
+            el.scrollIntoView({behavior: "auto", block: "start"});
+        }
     }
   },
   components: {
@@ -90,7 +101,6 @@ export default {
 </script>
 <style scoped>
 .navbar {
-  display: none;
   position: absolute;
   font-family: "Courier New", Courier, "Lucida Sans Typewriter",
     "Lucida Typewriter", monospace;
@@ -108,16 +118,43 @@ a {
   font-style: bold;
   color: red;
 }
-.mobileMenu {
-    display: none;
-}
+ .mobileMenu {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    font-size: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 99999;
+    text-transform: uppercase;
+} 
 .centralMenu {
   list-style: none;
-  display: flex;
+  display: none;
   flex-direction: column;
 }
-.menuListMobile {
-  display: none;
+ .menuListMobile {
+      display: block;
+      margin-top: 25vh;
+      margin-left: 10vh;
+}
+.showMenuOpen {
+  display: block;
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 100vh;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 0 0 0 90%;
+  z-index: 0;
+}
+.menuListMobile ul li {
+  line-height: 2em;
+}
+.menuListMobile ul li:hover {
+  cursor: pointer;
 }
 
 .title {
@@ -211,14 +248,14 @@ a {
         height: 10vw;
         width: 100%;
     }
-    a {
-        font-size: 30px;
-        z-index: 1;
-
+    a, a:hover, a:active, a:visited, a:focus {
+        text-decoration:none;
+        background-color: transparent;
+         font-size: 30px;
+          z-index: 1;
     }
     .mobileMenu {
         position: relative;
-        margin: 50px;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -245,7 +282,27 @@ a {
       margin-top: 50px;
     }
     .menuListMobile ul li {
-      line-height: 3em;
+      line-height: 1em;
     }
+    .title {
+      position: relative;
+      text-align: center;
+      transform: translateZ(0);
+      transform-style: preserve-3d;
+    }
+
+    .title .text {
+      font-family: sans-serif;
+      font-weight: 400;
+      font-size: 5vw;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+    
+    .closeIcon:hover {
+      transform: rotate(90deg);
+    }
+
 }
 </style>

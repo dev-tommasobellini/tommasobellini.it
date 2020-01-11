@@ -30,7 +30,7 @@ export default {
     @media (max-width: 767px) {
       .projects {
         height: 100vh;
-        border-radius: 0 20% 0;
+        border-radius: 0;
       }
     }
 </style>
