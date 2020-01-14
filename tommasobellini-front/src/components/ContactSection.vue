@@ -3,33 +3,50 @@
     <div class="contactContainer">
       <h2>Do you need some info?</h2>
       <h2>Feel free to contact me!</h2>
+      
       <div class="socialApps">
-        <div>
-            <a :href="socials.email">
-              <Email />
+        <table>
+          <tr>
+            <th>
+              <a :href="socials.email">
+                <Email />
+              </a>
+            </th>
+            <th>
               <a class="link">info@tommasobellini.it</a>
-            </a>
-          </div>
-          <div>
-            <a :href="socials.facebook">
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <a :href="socials.facebook">
               <Facebook />
             </a>
+            </th>
+            <th>
             <a class="link">tommaso.bellini.921</a>
-
-          </div>
-          <div>
-            <a :href="socials.linkedin">
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <a :href="socials.facebook">
               <Linkedin />
             </a>
+            </th>
+            <th>
             <a class="link">tommaso-bellini-33a756113</a>
-
-          </div>
-          <div>
-            <a :href="socials.instagram">
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <a :href="socials.facebook">
               <Instagram />
             </a>
-            <a class="link">znieczu_is_back</a>
-          </div>
+            </th>
+            <th>
+              <a class="link">znieczu_is_back</a>
+            </th>
+          </tr>
+        </table>
         </div>
     </div>
   </div>
@@ -64,6 +81,30 @@ import Email from 'vue-material-design-icons/Email.vue';
 <style scoped>
     a {
         color:slateblue;
+    }
+    a:hover {
+      color: red;
+      cursor: pointer;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      text-align: left;
+    }
+    tr, th {
+      margin: 10px;
+    }
+    th {
+      height: 50px;
+      padding: 5px;
+    }
+    th:nth-child(2) {
+      display: flex;
+      align-items: center;
+    }
+    th:nth-child(2) a{
+      font-size: 15px;
+
     }
   .contact {
     width: 100%;

@@ -1,5 +1,8 @@
 <template>
   <div class="navbar">
+    <!-- <div class="mobileMenuLeft">
+        <div :class="menuClicked ? 'showMenuOpenLeft' : ''"></div>
+    </div> -->
       <div class="mobileMenu">
         <div :class="menuClicked ? 'showMenuOpen' : ''">
           <div v-if="showExit" :class="menuClicked ? 'menuListMobile' : 'display: none'">
@@ -118,6 +121,7 @@ a {
   font-style: bold;
   color: red;
 }
+
  .mobileMenu {
     position: fixed;
     top: 50px;
@@ -129,6 +133,17 @@ a {
     z-index: 99999;
     text-transform: uppercase;
 } 
+.mobileMenuLeft{
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    font-size: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 99999;
+    text-transform: uppercase;
+}
 .centralMenu {
   list-style: none;
   display: none;
@@ -138,6 +153,8 @@ a {
       display: block;
       margin-top: 25vh;
       margin-left: 10vh;
+      opacity: 0;
+      animation: showUp 2s 2s forwards;
 }
 .showMenuOpen {
   display: block;
@@ -146,15 +163,29 @@ a {
   right: -50px;
   width: 100vh;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 0 0 0 90%;
+ background-image: url('../assets/ep_naturalblack.png');
+        animation: slide 40s linear infinite;  border-radius: 0 0 0 90%;
   z-index: 0;
+  transition: all 2s;
+}
+.showMenuOpenLeft {
+  display: block;
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 100vh;
+  height: 100vh;
+  background-image: url('../assets/ep_naturalblack.png');
+  animation: slide 40s linear infinite;  border-radius: 0 90% 0 0;
+  z-index: 0;
+  transition: all 2s;
 }
 .menuListMobile ul li {
   line-height: 2em;
 }
 .menuListMobile ul li:hover {
   cursor: pointer;
+
 }
 
 .title {
@@ -163,7 +194,12 @@ a {
   transform: translateZ(0);
   transform-style: preserve-3d;
 }
-
+.text:hover{
+  color: white;
+  text-decoration: line-through;
+  font-style: oblique;
+  transform: perspective(100px);
+}
 .title .text {
   font-family: sans-serif;
   font-weight: 400;
@@ -235,6 +271,14 @@ a {
   70%,
   to {
     clip-path: polygon(115% 0%, 120% 0%, 120% 100%, 115% 100%);
+  }
+}
+@keyframes showUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity:1;
   }
 }
 @media (max-width: 767px) {
