@@ -69,6 +69,7 @@ export default {
   color: white;
   background-image: url('../assets/ep_naturalblack.png');
   animation: slide 40s linear infinite;
+  font-family: 'Montserrat';
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -117,7 +118,7 @@ export default {
   margin: 0 auto;
   border-right: 2px solid rgba(255, 255, 255, 0.75);
   font-size: 180%;
-  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  font-family: 'Montserrat';
   text-align: center;
   white-space: nowrap;
   overflow: hidden;

@@ -87,13 +87,13 @@ h1, h2, h3, h4 {
   margin: 120px 250px;
 }
 .profile {
-  height: 300px;
+  height: 350px;
   width: 300px;
   margin: auto;
 }
 .profileImg {
   border-radius: 25px;
-  height: 300px;
+  height: 350px;
   width: 300px;
 }
 .title {
@@ -204,16 +204,17 @@ h1, h2, h3, h4 {
   .secondSectionContainer {
     min-height: 70vh;
     margin: 0;
+    padding: 30px;
   }
   .profile {
     height: 300px;
-    width: 300px;
+    width: 250px;
     margin: auto;
   }
   .profileImg {
     border-radius: 25px;
     height: 300px;
-    width: 300px;
+    width: 250px;
   }
 }
 </style>

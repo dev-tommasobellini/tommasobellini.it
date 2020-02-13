@@ -3,6 +3,11 @@
     <!-- <div class="mobileMenuLeft">
         <div :class="menuClicked ? 'showMenuOpenLeft' : ''"></div>
     </div> -->
+      <div class="leftLogo">
+        <div>
+          <h2>Tommaso Bellini</h2>
+        </div>
+      </div>
       <div class="mobileMenu">
         <div :class="menuClicked ? 'showMenuOpen' : ''">
           <div v-if="showExit" :class="menuClicked ? 'menuListMobile' : 'display: none'">
@@ -16,7 +21,7 @@
               </li>
             </ul>
           </div>
-         
+
         </div>
         <a @click="onClickMenu" class="icons">
           <span v-if="showApps">
@@ -27,7 +32,7 @@
           </span>
         </a>
       </div>
-      
+
 
     <div class="centralMenu">
 
@@ -105,8 +110,7 @@ export default {
 <style scoped>
 .navbar {
   position: absolute;
-  font-family: "Courier New", Courier, "Lucida Sans Typewriter",
-    "Lucida Typewriter", monospace;
+  font-family: 'Montserrat';
   top: 0;
   left: 0;
   height: 5vw;
@@ -121,18 +125,22 @@ a {
   font-style: bold;
   color: red;
 }
-
+ .leftLogo{
+   color: antiquewhite;
+   margin: 55px;
+   text-transform: uppercase;
+ }
  .mobileMenu {
     position: fixed;
     top: 50px;
     right: 50px;
-    font-size: 30px;
+    font-size: 40px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     z-index: 99999;
     text-transform: uppercase;
-} 
+}
 .mobileMenuLeft{
     position: fixed;
     top: 50px;
@@ -298,12 +306,19 @@ a {
          font-size: 30px;
           z-index: 1;
     }
+    .leftLogo{
+      color: antiquewhite;
+      margin: 30px;
+      text-transform: uppercase;
+      font-size: 10px;
+      display: none;
+    }
     .mobileMenu {
         position: relative;
         display: flex;
         justify-content: flex-end;
         align-items: center;
-    } 
+    }
     .material-design-icon:hover {
       cursor: pointer;
     }
@@ -343,7 +358,7 @@ a {
       text-transform: uppercase;
       letter-spacing: 3px;
     }
-    
+
     .closeIcon:hover {
       transform: rotate(90deg);
     }

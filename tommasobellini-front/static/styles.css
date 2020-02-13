@@ -9,7 +9,7 @@
     .container {
       background-color: rgba(0,0,0,0.9);
     }
-    
+
     .arrow-down {
       display: flex;
       align-items: center;
@@ -23,7 +23,7 @@
       display: flex;
       z-index: 1;
       top:30vh;
-      border-radius: 20px; 
+      border-radius: 20px;
       align-items: center;
       justify-content: center;
       position: absolute;
@@ -44,7 +44,7 @@
       border-right: 48vw solid transparent;
       border-top: 58vh solid rgba(0,0,0,0.7);;
     }
-    
+
     .arrow-down2 {
       position: absolute;
       top:0;
@@ -57,10 +57,10 @@
       border-top: 60vh solid rgba(0,0,0, 0.95);
       animation: openpostcard 3s 3s forwards;
       transform-origin: top;
-    
+
     }
-    
-    
+
+
     .header {
       display: flex;
       align-items: center;
@@ -104,8 +104,8 @@
       animation-name: example;
       animation-duration: 4s;
       animation-delay: 4s;
-      animation-fill-mode: forwards;  
-    
+      animation-fill-mode: forwards;
+
     }
     .title > #lastname {
       position: relative;
@@ -113,13 +113,13 @@
       margin: 50px;
       font-size: 55px;
       color: white;
-      -webkit-animation-name: example2; 
+      -webkit-animation-name: example2;
       -webkit-animation-duration: 4s;
       animation-name: example2;
       animation-duration: 4s;
       animation-delay: 4s;
-      animation-fill-mode: forwards;  
-    
+      animation-fill-mode: forwards;
+
     }
     .job  {
       position: relative;
@@ -129,8 +129,8 @@
       color: white;
       font-size: 25px;
       animation: example2 3s 4s linear, heartbeat 4s 3s 1;
-      animation-fill-mode: forwards;  
-    
+      animation-fill-mode: forwards;
+
     }
     .battle {
       display: flex;
@@ -148,13 +148,13 @@
       margin-left: 45px;
       text-align: start;
       animation: fade 2s 6s linear, shotittoright 3s 6s 4;
-      animation-fill-mode: forwards;  
+      animation-fill-mode: forwards;
     }
     .battle .back {
       text-align: right;
       margin-right: 45px;
       animation: fade 2s 6s linear, shotittoleft 3s 8s 4;
-      animation-fill-mode: forwards;  
+      animation-fill-mode: forwards;
     }
     .node-logo-box,.flask-logo-box, .django-logo-box{
       opacity: 0;
@@ -165,7 +165,7 @@
         align-items: center;
         justify-content: center;
         animation-delay: 9s;
-        
+
         animation-timing-function: linear;
     }
     .node-logo-box img, .flask-logo-box img, .django-logo-box img{
@@ -175,7 +175,7 @@
         animation-timing-function: linear;
     }
     .bootstrap-logo-box, .vue-logo-box, .react-logo-box {
-        opacity: 0; 
+        opacity: 0;
         width:250px;
         margin:20px auto 0 auto;
         align-items: center;
@@ -183,13 +183,13 @@
         animation: shotLeftToRight;
         animation-duration: 2s;
         animation-delay: 7s;
-        
+
         animation-timing-function: linear;
     }
     .vue-logo-box{
       animation-delay: 11s;
     }
-    .node-logo-box{     
+    .node-logo-box{
       animation-delay: 13s;
     }
     .bootstrap-logo-box {

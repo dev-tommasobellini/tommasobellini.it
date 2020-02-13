@@ -1,9 +1,9 @@
 <template>
   <div class="contact">
     <div class="contactContainer">
-      <h2>Do you need some info?</h2>
+      <h2>Do you need any information?</h2>
       <h2>Feel free to contact me!</h2>
-      
+
       <div class="socialApps">
         <table>
           <tr>
@@ -137,6 +137,7 @@ import Email from 'vue-material-design-icons/Email.vue';
     .contact {
       height: 100vh;
       border-radius: 0;
+      padding: 30px;
     }
   }
 </style>

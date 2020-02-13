@@ -31,6 +31,7 @@ export default {
       .projects {
         height: 100vh;
         border-radius: 0;
+        padding: 30px;
       }
     }
 </style>

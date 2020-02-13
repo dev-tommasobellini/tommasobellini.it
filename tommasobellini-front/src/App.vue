@@ -39,13 +39,13 @@ html, body {
   width: 100vw;
 }
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
 body{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat';
 }
 a {
   text-decoration: none;
