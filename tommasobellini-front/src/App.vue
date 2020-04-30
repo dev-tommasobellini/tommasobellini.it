@@ -7,6 +7,7 @@
       <SecondSection />
     </transition>
     <ProjectsSection />
+    <ThoughtsSection />
     <ContactSection />
     <!-- <router-view/> -->
     <FooterBar />
@@ -18,6 +19,7 @@ import Navbar from './layout/Navbar'
 import FirstSection from './components/FirstSection';
 import SecondSection from './components/SecondSection';
 import ProjectsSection from './components/ProjectsSection';
+import ThoughtsSection from './components/ThoughtsSection';
 import ContactSection from './components/ContactSection';
 import IntroSection from './components/IntroSection';
 import FooterBar from './layout/FooterBar';
@@ -29,6 +31,7 @@ export default {
     FirstSection,
     SecondSection,
     ProjectsSection,
+    ThoughtsSection,
     ContactSection,
     IntroSection,
     FooterBar

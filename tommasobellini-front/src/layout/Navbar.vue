@@ -25,7 +25,10 @@
                     </span>
                   <span class="text write" data-splitting="lines" v-else-if="item.icon === 'project'">
                       <ProjectorScreen/>
-                    </span>
+                  </span>
+                  <span class="text write" data-splitting="lines" v-else-if="item.icon === 'thoughts'">
+                      <ThoughtsScreen/>
+                  </span>
                   <span class="text write" data-splitting="lines" v-else-if="item.icon === 'contact'">
                       <AccountBox/>
                     </span>
@@ -96,6 +99,12 @@
             url: "#about",
             icon: "information",
             section: 'secondSectionContainer'
+          },
+          {
+            name: "Thoughts",
+            url: "#thoughts",
+            icon: "information",
+            section: 'thoughts'
           },
           {
             name: "Contact",
