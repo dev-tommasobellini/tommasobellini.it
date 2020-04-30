@@ -3,7 +3,9 @@
     <Navbar />
     <IntroSection />
     <!-- <FirstSection /> -->
-    <SecondSection />
+    <transition name="fade">
+      <SecondSection />
+    </transition>
     <ProjectsSection />
     <ContactSection />
     <!-- <router-view/> -->

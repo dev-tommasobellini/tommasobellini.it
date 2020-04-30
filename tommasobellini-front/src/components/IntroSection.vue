@@ -3,9 +3,19 @@
     <div class="rounded">
 
     </div>
-
-    <h1 class="line-1 anim-typewriter">Hi! Welcome in my portfolio.</h1>
-    <h2 class="line-2 anim-typewriterDelay">Enjoy it!</h2>
+    <div class="shake">
+      <h1 class="line-1 anim-typewriter">Hi! Welcome in my portfolio.</h1>
+      <h2 class="line-2 anim-typewriterDelay">Enjoy it!</h2>
+    </div>
+    <div class="spaceshipFlying">
+      <img :src="spaceshipImage" />
+    </div>
+    <div class="enemyFlying">
+      <img :src="enemyImage" />
+    </div>
+    <div class="enemyFlying2">
+      <img :src="enemyImage" />
+    </div>
     <div class="frameworkLogos">
       <!-- <img src="../assets/django-logo.png" width="1000"/> -->
     </div>
@@ -23,13 +33,17 @@
 </template>
 <script>
 import ChevronDownIcon from "vue-material-design-icons/ChevronDown.vue";
-import '../../static/animations.css'
+import '../../static/animations.css';
+import spaceshipImage from '../assets/spaceship.png';
+import enemyImage from '../assets/enemy.png';
 
 export default {
   name: "IntroSection",
   data() {
       return {
-        clickedArrows: false
+        clickedArrows: false,
+        spaceshipImage: spaceshipImage,
+        enemyImage: enemyImage
       }
   },
   methods: {
@@ -75,6 +89,31 @@ export default {
   justify-content: center;
   align-items: center;
 }
+.spaceshipFlying {
+  position: absolute;
+  top: -50px;
+  right: -15px;
+  opacity: 0;
+  animation: flying 2s 6s linear;
+  transform: scaleX(-1);
+  z-index: 1;
+}
+.enemyFlying {
+  position: absolute;
+  top: -50px;
+  right: 120px;
+  opacity: 0;
+  transform: scaleX(1);
+  animation: flying2 1s 10s linear;
+}
+.enemyFlying2 {
+  position: absolute;
+  top: 50px;
+  right: -100px;
+  opacity: 0;
+  transform: scaleX(1);
+  animation: flying2 1s 10.5s linear;
+}
 .rounded {
   position: absolute;
   display: flex;
@@ -117,7 +156,7 @@ export default {
   width: 30em;
   margin: 0 auto;
   border-right: 2px solid rgba(255, 255, 255, 0.75);
-  font-size: 180%;
+  font-size: 7vh;
   font-family: 'Montserrat';
   text-align: center;
   white-space: nowrap;
@@ -133,13 +172,54 @@ export default {
   animation: typewriter 2s steps(70) 1s 1 normal both,
     blinkTextCursor 500ms steps(50) infinite normal;
 }
+.shake {
+  z-index: 1;
+  animation: shake 1s 4s 6;
+}
 .anim-typewriterDelay {
   animation: typewriter2 2s steps(20) 1s 1 normal both,
-    blinkTextCursor 500ms steps(20) infinite normal;
+    blinkTextCursor 500ms steps(20) infinite normal both;
   animation-delay: 2s;
 }
 .anim-blinkArrows {
   animation: blinkTextCursor 500ms infinite normal;
+}
+@keyframes flying {
+  0% {
+    transform: translatex(200px) translatey(-300px) scale(1.8) scaleX(-1);
+
+  }
+  100% {
+    opacity: 1;
+    transform: translatex(-1000px) translatey(1000px) scale(1.8) scaleX(-1);
+  }
+}
+@keyframes flying2 {
+  0% {
+    transform: translatex(200px) translatey(-300px) scale(1.8);
+
+  }
+  100% {
+    opacity: 1;
+    transform: translatex(-1000px) translatey(1000px) scale(1.8);
+  }
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 @keyframes typewriter {
   from {
