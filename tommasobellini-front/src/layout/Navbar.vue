@@ -26,7 +26,7 @@
                   <span class="text write" data-splitting="lines" v-else-if="item.icon === 'project'">
                       <ProjectorScreen/>
                   </span>
-                  <span class="text write" data-splitting="lines" v-else-if="item.icon === 'thoughts'">
+                  <span class="text write" data-splitting="lines" v-else-if="item.icon === 'thought-bubble'">
                       <ThoughtsScreen/>
                   </span>
                   <span class="text write" data-splitting="lines" v-else-if="item.icon === 'contact'">
@@ -103,7 +103,7 @@
           {
             name: "Thoughts",
             url: "#thoughts",
-            icon: "information",
+            icon: "thought-bubble",
             section: 'thoughts'
           },
           {
