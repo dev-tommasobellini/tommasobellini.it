@@ -12,4 +12,4 @@ git push master master
 npm run build
 
 # deploy to firebase
-firebase deploy
+firebase deploy --only hosting
